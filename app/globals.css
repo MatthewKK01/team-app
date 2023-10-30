@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  @apply bg-offWhite;
+  @apply bg-offWhite overflow-x-hidden;
 }
 .hero {
   height: auto;
@@ -60,6 +60,18 @@ body {
 #app {
   height: 100%;
 }
+.swiper-slide {
+  @apply sm:w-[260px] lg:w-[367px] !important;
+}
+.swiper-slide-active {
+  @apply ml-4;
+}
+.swiper {
+  @apply lg:justify-start !important;
+}
+.swiper-wrapper {
+  @apply lg:pl-40;
+}
 html,
 body {
   position: relative;
@@ -101,10 +113,9 @@ ul {
 }
 .reviewDiv {
   display: flex;
-  min-width: 260px;
-  max-width: 367px;
+  @apply w-[260px];
+
   padding: 44px 33px;
   flex-direction: column;
   align-items: flex-start;
-  @apply mx-auto;
 }

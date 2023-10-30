@@ -1,16 +1,22 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import mockup from "../public/mockup.png";
+import mockup_sm from "../public/mockup-sm.png";
+import mockup_tablet from "../public/mockup-tablet.png";
 import mockupMobile from "../public/mockup-mobile.png";
 import Link from "next/link";
 
 function Mockup() {
-  
   return (
     <section className="py-16 flex flex-col mb-10">
       <Image
         src={mockupMobile}
-        className="float-right self-end"
+        className="float-right self-end sm:hidden"
+        objectFit="contain"
+        alt="mockup"
+      />
+      <Image
+        src={mockup_sm}
+        className="float-right self-end max-sm:hidden"
         objectFit="contain"
         alt="mockup"
       />

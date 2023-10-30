@@ -9,16 +9,15 @@ import image2 from "../public/image2.png";
 import image3 from "../public/image3.png";
 import image4 from "../public/image4.png";
 import Article from "./Article";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+
 import AnimatedImage from "./AnimatedImage";
 
 function InfoSection() {
   return (
     <section className="grid grid-cols-1 grid-rows-2 gap-[72px]">
-      <div className="flex flex-col gap-6">
-        <div className="w-[300px] h-[288px] relative">
-          <Image src={laptop} alt="laptop" fill></Image>
+      <div className="flex flex-col gap-6 sm:flex-row">
+        <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px]  relative">
+          <Image src={img} alt="img" fill></Image>
           <AnimatedImage
             classn="float-right mt-4 mr-2"
             src={calendar}
@@ -33,8 +32,8 @@ function InfoSection() {
         />
       </div>
 
-      <div className="flex flex-col gap-6 ">
-        <div className="w-[300px] h-[288px] relative">
+      <div className="flex flex-col gap-6  sm:flex-row-reverse">
+        <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px] relative">
           <Image src={girl} alt={"girl"} fill />
           <div className="flex flex-col gap-2 float-right mt-4 mr-2">
             <AnimatedImage classn="" src={image} alt={"image"} />
@@ -47,8 +46,8 @@ function InfoSection() {
         />
       </div>
 
-      <div className="flex flex-col gap-6">
-        <div className="w-[300px] h-[288px] relative flex">
+      <div className="flex flex-col gap-6 sm:flex-row">
+        <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px] relative flex">
           <Image src={laptop} alt={"laptop"} fill />
           <div className="flex flex-col gap-2 self-end ml-4 mb-4">
             <AnimatedImage classn="" src={image3} alt={"image3"} />

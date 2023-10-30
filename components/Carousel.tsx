@@ -45,11 +45,25 @@ function Carousel() {
         What people say about Team
       </h1>
       <Swiper
+        breakpoints={{
+          320: {
+            spaceBetween: 30,
+            slidesPerView: 1.4,
+            centeredSlides: true,
+          },
+          568: {
+            spaceBetween: 16,
+            slidesPerView: 2,
+            centeredSlides: false,
+          },
+          1440: {
+            spaceBetween: 30,
+            slidesPerView: 1,
+            centeredSlides: true,
+          },
+        }}
         className="h-[480px] mt-20"
-        centeredSlides={true}
         modules={[Navigation, Pagination]}
-        spaceBetween={30}
-        slidesPerView={1.4}
         navigation={{
           prevEl: ".custom-prev-button",
           nextEl: ".custom-next-button",
@@ -67,7 +81,7 @@ function Carousel() {
         ))}
       </Swiper>
 
-      <button className={`custom-prev-button swiper-button `}>
+      <button className={`custom-prev-button sm:ml-20 swiper-button `}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"

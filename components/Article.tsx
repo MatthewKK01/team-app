@@ -9,7 +9,7 @@ function Article({
   paragraph: string;
 }) {
   return (
-    <article className="flex flex-col gap-6 px-8">
+    <article className="flex flex-col gap-6 px-8 sm:gap-0 sm:flex-1">
       <h1 className="text-darkBlue font-bold text-4xl">{heading}</h1>
       <p className="text-base font-normal text-darkBlue mb-12">{paragraph}</p>
       <Link

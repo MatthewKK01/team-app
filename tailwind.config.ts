@@ -16,6 +16,11 @@ const config: Config = {
         offWhite: '#F5F5F5',
         lightOrange: '#FFBA79',
       },
+      screens: {
+        "sm": "568px",
+        "md": "744px",
+        "2xl": "1440px",
+      },
       boxShadow: {
         review: "0px 16px 24px 0px rgba(118, 118, 178, 0.24)"
       }

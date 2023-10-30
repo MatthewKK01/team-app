@@ -3,7 +3,7 @@ import React from "react";
 
 function Review({ name, position, img, title }) {
   return (
-    <div className="bg-white reviewDiv shadow-review">
+    <div className="bg-white w-full reviewDiv shadow-review">
       <div className="flex-row flex mb-6">
         {Array(5)
           .fill(0)

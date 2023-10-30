@@ -9,7 +9,6 @@ function Footer() {
     e.preventDefault();
     console.log(`Message Sent`);
     setisSubscribed(true);
-    
   };
   return (
     <footer className="bg-darkBlue px-6 pt-12 pb-9">
@@ -30,52 +29,56 @@ function Footer() {
             fill="#5468E7"
           />
         </svg>
-        <p className="text-sm font-normal mb-14 text-offWhite">
+        <p className="text-sm font-normal mb-14 sm:w-40 text-offWhite">
           Collaboration platform for mordern team
         </p>
       </div>
-      <div className="flex flex-col gap-3">
-        <h2 className="text-softBlue font-normal text-2xl">Stay op to date</h2>
-        <p className="text-offWhite font-normal text-sm">
-          Subscribe to our newseller
-        </p>
-        {isSubscribed ? (
-          <div className="bg-softBlue w-100 rounded px-3 py-4">
-            <p className="text-xs font-light text-offWhite">
-              Thank you! You have been subscribed.
-            </p>
-          </div>
-        ) : (
-          <form
-            onSubmit={handlesubmit}
-            className="bg-offWhite bg-opacity-25 relative flex text-offWhite"
-          >
-            <button className="focus:text-black" type="submit">
-              <svg
-                className="absolute hover:fill-black-black right-4 top-3"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  className="hover:fill-black"
-                  d="M5.20874 13.0002H16.3787L11.4987 17.8802C11.1087 18.2702 11.1087 18.9102 11.4987 19.3002C11.8887 19.6902 12.5187 19.6902 12.9087 19.3002L19.4987 12.7102C19.8887 12.3202 19.8887 11.6902 19.4987 11.3002L12.9187 4.7002C12.7319 4.51295 12.4783 4.40771 12.2137 4.40771C11.9492 4.40771 11.6956 4.51295 11.5087 4.7002C11.1187 5.0902 11.1187 5.7202 11.5087 6.1102L16.3787 11.0002H5.20874C4.65874 11.0002 4.20874 11.4502 4.20874 12.0002C4.20874 12.5502 4.65874 13.0002 5.20874 13.0002Z"
-                  fill="#F5F5F5"
-                />
-              </svg>
-            </button>
-            <input
-              className="focus:bg-white focus:text-black outline-none w-full bg-offWhite bg-opacity-25 rounded px-4 py-3"
-              type="email"
-              name="email"
-              onChange={(e) => setemail(e.target.value)}
-              id="email"
-            />
-          </form>
-        )}
-        <div className="flex flex-col gap-12 mt-12">
+      <div className="flex flex-col gap-3 sm:flex-col-reverse">
+        <div className="">
+          <h2 className="text-softBlue font-normal text-2xl">
+            Stay op to date
+          </h2>
+          <p className="text-offWhite font-normal text-sm">
+            Subscribe to our newseller
+          </p>
+          {isSubscribed ? (
+            <div className="bg-softBlue w-100 rounded px-3 py-4">
+              <p className="text-xs font-light text-offWhite">
+                Thank you! You have been subscribed.
+              </p>
+            </div>
+          ) : (
+            <form
+              onSubmit={handlesubmit}
+              className="bg-offWhite bg-opacity-25 sm:w-[268px] relative flex text-offWhite"
+            >
+              <button className="focus:text-black" type="submit">
+                <svg
+                  className="absolute hover:fill-black-black right-4 top-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    className="hover:fill-black"
+                    d="M5.20874 13.0002H16.3787L11.4987 17.8802C11.1087 18.2702 11.1087 18.9102 11.4987 19.3002C11.8887 19.6902 12.5187 19.6902 12.9087 19.3002L19.4987 12.7102C19.8887 12.3202 19.8887 11.6902 19.4987 11.3002L12.9187 4.7002C12.7319 4.51295 12.4783 4.40771 12.2137 4.40771C11.9492 4.40771 11.6956 4.51295 11.5087 4.7002C11.1187 5.0902 11.1187 5.7202 11.5087 6.1102L16.3787 11.0002H5.20874C4.65874 11.0002 4.20874 11.4502 4.20874 12.0002C4.20874 12.5502 4.65874 13.0002 5.20874 13.0002Z"
+                    fill="#F5F5F5"
+                  />
+                </svg>
+              </button>
+              <input
+                className="focus:bg-white focus:text-black outline-none w-full bg-offWhite bg-opacity-25 rounded px-4 py-3"
+                type="email"
+                name="email"
+                onChange={(e) => setemail(e.target.value)}
+                id="email"
+              />
+            </form>
+          )}
+        </div>
+        <div className="flex flex-col sm:flex-row gap-12 mt-12 sm:mt-0">
           <article>
             <h2 className="text-softBlue font-normal text-2xl mb-4">Company</h2>
             <ul>

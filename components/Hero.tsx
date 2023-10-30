@@ -28,8 +28,8 @@ function Hero() {
         All-in-one place for your remote team to chat, collaborate and track
         project progress.
       </p>
-      <div className="w-full flex flex-col gap-4 pb-28">
-        <div className="flex relative">
+      <div className="w-full flex  flex-col sm:flex-row gap-4 pb-28">
+        <div className="flex sm:flex-1  relative">
           <input
             type="text"
             placeholder="Email"
@@ -49,7 +49,7 @@ function Hero() {
             />
           </svg>
         </div>
-        <button className="text-offWhite w-full bg-softBlue rounded px-11 py-3 text-lg font-normal ">
+        <button className="text-offWhite sm:w-auto w-full bg-softBlue rounded px-11 py-3 text-lg font-normal ">
           Get early access
         </button>
       </div>
