@@ -2,10 +2,13 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import img from "../public/img-group-mobile.png";
 import img_tablet from "../public/img-tablet.png";
+import img_desktop from "../public/img_desktop.png";
 import girl from "../public/girl.png";
 import girl_tablet from "../public/girl-tablet.png";
+import girl_desktop from "../public/girl_desktop.png";
 import laptop from "../public/laptop.png";
 import laptop_tablet from "../public/laptop-tablet.png";
+import laptop_desktop from "../public/laptop_desktop.png";
 import calendar from "../public/Calender.png";
 import image from "../public/image.png";
 import image2 from "../public/image2.png";
@@ -17,16 +20,17 @@ import AnimatedImage from "./AnimatedImage";
 
 function InfoSection() {
   return (
-    <section className="grid grid-cols-1 grid-rows-2 gap-[72px]">
-      <div className="flex flex-col gap-6 sm:flex-row">
-        <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px] md:w-[352px] md:h-[493px]  relative">
-          <Image src={img} alt="img" className="md:hidden" fill></Image>
+    <section className="grid grid-cols-1 xl:px-20 2xl:px-40 grid-rows-2 gap-[72px]">
+      <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center">
+        <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px] md:w-[352px] md:h-[493px]  xl:w-[525px] xl:h-[525px]  relative">
+          <Image src={img} alt="img" className="md:hidden" fill />
           <Image
             src={img_tablet}
             alt="img"
-            className="max-md:hidden"
+            className="max-md:hidden xl:hidden"
             fill
-          ></Image>
+          />
+          <Image src={img_desktop} alt="img" className="max-xl:hidden" fill />
           <AnimatedImage
             classn="float-right mt-4 mr-2"
             src={calendar}
@@ -41,14 +45,20 @@ function InfoSection() {
         />
       </div>
 
-      <div className="flex flex-col gap-6  sm:flex-row-reverse">
-        <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px] md:w-[352px] md:h-[493px] relative">
+      <div className="flex flex-col gap-6  sm:flex-row-reverse sm:justify-between sm:items-center">
+        <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px] md:w-[352px] md:h-[493px]  xl:w-[525px] xl:h-[525px] relative">
           <Image src={girl} alt={"girl"} fill className="md:hidden" />
           <Image
             src={girl_tablet}
             alt={"girl"}
             fill
-            className="max-md:hidden"
+            className="max-md:hidden xl:hidden"
+          />
+          <Image
+            src={girl_desktop}
+            alt={"girl"}
+            fill
+            className=" max-xl:hidden"
           />
           <div className="flex flex-col gap-2 float-right mt-4 mr-2">
             <AnimatedImage classn="" src={image} alt={"image"} />
@@ -61,13 +71,19 @@ function InfoSection() {
         />
       </div>
 
-      <div className="flex flex-col gap-6 sm:flex-row">
-        <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px] md:w-[352px] md:h-[493px] relative flex">
+      <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center">
+        <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px] md:w-[352px] md:h-[493px] xl:w-[525px] xl:h-[525px] relative flex">
           <Image src={laptop} alt={"laptop"} fill className="md:hidden" />
           <Image
             src={laptop_tablet}
             alt={"laptop"}
-            className="max-md:hidden"
+            className="max-md:hidden xl:hidden"
+            fill
+          />
+          <Image
+            src={laptop_desktop}
+            alt={"laptop"}
+            className="max-xl:hidden"
             fill
           />
           <div className="flex flex-col gap-2 self-end ml-4 mb-4">

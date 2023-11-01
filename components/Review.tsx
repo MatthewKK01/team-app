@@ -24,8 +24,10 @@ function Review({ name, position, img, title }) {
             </svg>
           ))}
       </div>
-      <p className="mb-10">{title}</p>
-      <div className="grid grid-cols-2">
+      <p className="mb-10 font-normal sm:text-base xl:text-lg xl:leading-[27px] xl:flex-1">
+        {title}
+      </p>
+      <div className="flex gap-4 justify-center items-center">
         <Image width={56} height={56} src={img} alt="" />
         <div>
           <h1>{name}</h1>

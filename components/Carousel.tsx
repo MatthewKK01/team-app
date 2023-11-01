@@ -61,13 +61,21 @@ function Carousel() {
             slidesPerView: 2.5,
             centeredSlides: false,
           },
+
           1440: {
+            width: 1440,
             spaceBetween: 30,
             slidesPerView: 3,
-            centeredSlides: true,
+            centeredSlides: false,
+          },
+          1980: {
+            width: 1440,
+            spaceBetween: 30,
+            slidesPerView: 1,
+            centeredSlides: false,
           },
         }}
-        className="h-[480px] mt-20"
+        className="sm:h-[525px] xl:h-[480px] mt-20"
         modules={[Navigation, Pagination]}
         navigation={{
           prevEl: ".custom-prev-button",
@@ -86,7 +94,7 @@ function Carousel() {
         ))}
       </Swiper>
 
-      <button className={`custom-prev-button sm:ml-20 swiper-button `}>
+      <button className={`custom-prev-button sm:ml-20  swiper-button `}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"

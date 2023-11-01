@@ -63,6 +63,9 @@ body {
 .swiper-slide {
   @apply sm:w-[260px] lg:w-[367px] !important;
 }
+.swiper-button-disabled {
+  visibility: hidden;
+}
 .swiper-slide-active {
   @apply ml-4;
 }
@@ -113,7 +116,7 @@ ul {
 }
 .reviewDiv {
   display: flex;
-  @apply w-[260px];
+  @apply w-[260px] xl:w-[367px] xl:h-[429px];
 
   padding: 44px 33px;
   flex-direction: column;

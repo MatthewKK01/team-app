@@ -35,11 +35,11 @@ function Hero() {
           </ul>
         </nav>
       </div>
-      <div className="container">
-        <h1 className="text-4xl font-bold text-offWhite mb-4">
+      <div className="max-xl:container xl:w-[48%]">
+        <h1 className="text-4xl font-bold  xl:leading-[64px] xl:text-[50px] text-offWhite mb-4">
           Instant collaboration for remote teams
         </h1>
-        <p className="text-base font-normal text-offWhite mb-14">
+        <p className="text-base xl:text-lg xl:leading-[27px] font-normal xl:w-[70%] text-offWhite mb-14">
           All-in-one place for your remote team to chat, collaborate and track
           project progress.
         </p>
