@@ -3,11 +3,12 @@ import React, { useEffect } from "react";
 import mockup_sm from "../public/mockup-sm.png";
 import mockup_tablet from "../public/mockup-tablet.png";
 import mockupMobile from "../public/mockup-mobile.png";
+import mockup_desktop from "../public/mockup-desktop.png";
 import Link from "next/link";
 
 function Mockup() {
   return (
-    <section className="py-16 flex flex-col mb-10">
+    <section className="py-16 2xl:pl-36 flex 2xl:flex-row-reverse 2xl:items-center 2xl:gap-14 flex-col mb-10">
       <Image
         src={mockupMobile}
         className="float-right self-end sm:hidden"
@@ -16,15 +17,27 @@ function Mockup() {
       />
       <Image
         src={mockup_sm}
-        className="float-right self-end max-sm:hidden"
+        className="float-right self-end max-sm:hidden md:hidden"
         objectFit="contain"
         alt="mockup"
       />
-      <article className="flex flex-col gap-6 px-8">
-        <h1 className="text-darkBlue font-bold text-4xl">
+      <Image
+        src={mockup_tablet}
+        className="float-right self-end max-md:hidden lg:hidden"
+        objectFit="contain"
+        alt="mockup"
+      />
+      <Image
+        src={mockup_desktop}
+        className="float-right self-end max-lg:hidden"
+        objectFit="contain"
+        alt="mockup"
+      />
+      <article className="flex flex-col  px-8 md:px-[64px] 2xl:px-0">
+        <h1 className="text-darkBlue font-bold md:w-3/4 text-4xl md:text-5xl md:mb-6 md:leading-[64px]">
           Chats for your distributed teams
         </h1>
-        <p className="text-base font-normal text-darkBlue mb-12">
+        <p className="text-base font-normal text-darkBlue mb-12 md:w-11/12">
           Team combines the immediacy of real-time chat with an email threading
           model. With Team, you can catch up on important conversations while
           ignoring irrelevant ones.

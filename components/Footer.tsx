@@ -35,10 +35,10 @@ function Footer() {
       </div>
       <div className="flex flex-col gap-3 sm:flex-col-reverse">
         <div className="">
-          <h2 className="text-softBlue font-normal text-2xl">
+          <h2 className="text-softBlue font-normal text-2xl mb-4">
             Stay op to date
           </h2>
-          <p className="text-offWhite font-normal text-sm">
+          <p className="text-offWhite font-normal text-sm mb-2">
             Subscribe to our newseller
           </p>
           {isSubscribed ? (
@@ -105,7 +105,9 @@ function Footer() {
             <ul>
               <li>info@teamapp.com</li>
               <li>1-800-200-300</li>
-              <li>1010 Sunset Blv. Palo Alto, California</li>
+              <li className="md:w-[55%]">
+                1010 Sunset Blv. Palo Alto, California
+              </li>
             </ul>
           </article>
         </div>

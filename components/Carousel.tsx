@@ -56,9 +56,14 @@ function Carousel() {
             slidesPerView: 2,
             centeredSlides: false,
           },
+          744: {
+            spaceBetween: 16,
+            slidesPerView: 2.5,
+            centeredSlides: false,
+          },
           1440: {
             spaceBetween: 30,
-            slidesPerView: 1,
+            slidesPerView: 3,
             centeredSlides: true,
           },
         }}
