@@ -75,7 +75,7 @@ function Carousel() {
             centeredSlides: false,
           },
         }}
-        className="sm:h-[525px] xl:h-[480px] mt-20"
+        className="sm:h-[525px] h-[465px] xl:h-[480px] mt-20"
         modules={[Navigation, Pagination]}
         navigation={{
           prevEl: ".custom-prev-button",

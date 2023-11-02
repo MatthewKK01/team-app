@@ -10,10 +10,15 @@ import laptop from "../public/laptop.png";
 import laptop_tablet from "../public/laptop-tablet.png";
 import laptop_desktop from "../public/laptop_desktop.png";
 import calendar from "../public/Calender.png";
+import calendar_desktop from "../public/Calender_dekstop.png";
 import image from "../public/image.png";
 import image2 from "../public/image2.png";
+import image_desktop from "../public/image_desktop.png";
+import image2_desktop from "../public/image2_desktop.png";
 import image3 from "../public/image3.png";
 import image4 from "../public/image4.png";
+import image3_desktop from "../public/image3_desktop.png";
+import image4_desktop from "../public/image4_desktop.png";
 import Article from "./Article";
 
 import AnimatedImage from "./AnimatedImage";
@@ -32,8 +37,13 @@ function InfoSection() {
           />
           <Image src={img_desktop} alt="img" className="max-xl:hidden" fill />
           <AnimatedImage
-            classn="float-right mt-4 mr-2"
+            classn="float-right md:hidden mt-4 mr-2"
             src={calendar}
+            alt={"calendar"}
+          />
+          <AnimatedImage
+            classn="float-right max-md:hidden mt-4 mr-2"
+            src={calendar_desktop}
             alt={"calendar"}
           />
         </div>
@@ -61,8 +71,18 @@ function InfoSection() {
             className=" max-xl:hidden"
           />
           <div className="flex flex-col gap-2 float-right mt-4 mr-2">
-            <AnimatedImage classn="" src={image} alt={"image"} />
-            <AnimatedImage classn="" src={image2} alt={"image2"} />
+            <AnimatedImage classn="lg:hidden" src={image} alt={"image"} />
+            <AnimatedImage classn="lg:hidden" src={image2} alt={"image2"} />
+            <AnimatedImage
+              classn="max-lg:hidden "
+              src={image_desktop}
+              alt={"image"}
+            />
+            <AnimatedImage
+              classn="max-lg:hidden "
+              src={image2_desktop}
+              alt={"image2"}
+            />
           </div>
         </div>
         <Article
@@ -87,8 +107,18 @@ function InfoSection() {
             fill
           />
           <div className="flex flex-col gap-2 self-end ml-4 mb-4">
-            <AnimatedImage classn="" src={image3} alt={"image3"} />
-            <AnimatedImage classn="" src={image4} alt={"image4"} />
+            <AnimatedImage classn="lg:hidden" src={image3} alt={"image3"} />
+            <AnimatedImage classn="lg:hidden" src={image4} alt={"image4"} />
+            <AnimatedImage
+              classn="max-lg:hidden"
+              src={image3_desktop}
+              alt={"image3"}
+            />
+            <AnimatedImage
+              classn="max-lg:hidden"
+              src={image4_desktop}
+              alt={"image4"}
+            />
           </div>
         </div>
         <Article

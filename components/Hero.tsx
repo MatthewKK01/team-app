@@ -1,10 +1,11 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "flowbite";
 
 function Hero() {
   const [email, setEmail] = useState("");
   const [isActive, setIsActive] = useState(false);
+  const menuRef = useRef();
   const handleDropdown = () => {
     setIsActive(!isActive);
   };
@@ -30,12 +31,26 @@ function Hero() {
       console.error("Failed to send email");
     }
   };
+  const handleOutsideClick = (event: any) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsActive(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
 
   return (
     <div className="hero mb-10 px-8 2xl:px-36 md:px-16">
       <div className="flex justify-between items-center pt-8 mb-36">
         <Image src="/Logo.svg" width={138} height={52} alt="logo" />
         <div
+          ref={menuRef}
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
           className={`md:hidden p-[14px] cursor-pointer rounded-t-md ${
@@ -69,7 +84,7 @@ function Hero() {
               <button
                 data-modal-target="default-modal"
                 data-modal-toggle="default-modal"
-                className="capitalize px-11 py-2 bg-softBlue bg-opacity-50 rounded text-offWhite text-lg"
+                className="capitalize whitespace-nowrap px-11 py-2 bg-softBlue bg-opacity-50 rounded text-offWhite text-lg"
               >
                 get access
               </button>
@@ -78,7 +93,7 @@ function Hero() {
         </div>
 
         <nav className=" max-md:hidden">
-          <ul className="flex flex-col items-start justify-center  gap-4 xl:gap-14">
+          <ul className="flex flex-row items-center justify-center  gap-4 xl:gap-14">
             <li>Product</li>
             <li>Blog</li>
             <li>Support</li>
