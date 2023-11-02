@@ -5,7 +5,7 @@ import "flowbite";
 function Hero() {
   const [email, setEmail] = useState("");
   const [isActive, setIsActive] = useState(false);
-  const menuRef = useRef();
+  const menuRef = useRef<HTMLDivElement>();
   const handleDropdown = () => {
     setIsActive(!isActive);
   };
