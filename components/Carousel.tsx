@@ -94,7 +94,9 @@ function Carousel() {
         ))}
       </Swiper>
 
-      <button className={`custom-prev-button sm:ml-20  swiper-button `}>
+      <button
+        className={`custom-prev-button sm:ml-20 2xl:ml-36 swiper-button `}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"

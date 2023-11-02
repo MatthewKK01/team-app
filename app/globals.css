@@ -73,7 +73,7 @@ body {
   @apply lg:justify-start !important;
 }
 .swiper-wrapper {
-  @apply lg:pl-40;
+  @apply 2xl:pl-36;
 }
 html,
 body {

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 function Mockup() {
   return (
-    <section className="py-16 xl:pl-20 flex xl:flex-row-reverse xl:items-center xl:gap-14 flex-col mb-10">
+    <section className="py-16 xl:pl-20 2xl:pl-36 flex xl:flex-row-reverse xl:items-center xl:gap-14 flex-col mb-10">
       <Image
         src={mockupMobile}
         className="float-right self-end sm:hidden"

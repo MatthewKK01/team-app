@@ -20,7 +20,7 @@ import AnimatedImage from "./AnimatedImage";
 
 function InfoSection() {
   return (
-    <section className="grid grid-cols-1 xl:px-20 2xl:px-40 grid-rows-2 gap-[72px]">
+    <section className="grid grid-cols-1  xl:px-20 2xl:px-36 grid-rows-2 gap-[72px]">
       <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center">
         <div className="w-[300px] h-[288px] sm:w-[280px] sm:h-[360px] md:w-[352px] md:h-[493px]  xl:w-[525px] xl:h-[525px]  relative">
           <Image src={img} alt="img" className="md:hidden" fill />

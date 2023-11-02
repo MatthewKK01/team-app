@@ -11,8 +11,8 @@ function Footer() {
     setisSubscribed(true);
   };
   return (
-    <footer className="bg-darkBlue  px-6 pt-12 pb-9">
-      <div className="xl:flex-row 2xl:justify-center xl:flex">
+    <footer className="bg-darkBlue 2xl:pl-36 px-6 pt-12 2xl:pt-[73px] pb-9">
+      <div className="xl:flex-row   xl:flex">
         <div className="logo xl:mr-32 flex flex-col gap-4">
           <svg
             width="138"

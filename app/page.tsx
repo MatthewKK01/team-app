@@ -15,7 +15,6 @@ export default function Home() {
       <Mockup />
       <InfoSection />
       <Carousel />
-   
       <Footer />
     </main>
   );
